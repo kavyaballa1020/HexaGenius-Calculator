@@ -100,6 +100,11 @@ const NumberSystemCalculator = () => {
             />
           </div>
         </label>
+                 <div>
+          Made by 
+  < a href="https://github.com/" >  Balla Kavya</a>
+
+</div>
       </div>
     </div>
   );
