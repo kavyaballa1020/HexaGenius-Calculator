@@ -102,7 +102,7 @@ const NumberSystemCalculator = () => {
         </label>
            <div>
           Made by 
-              < a href="https://github.com/" >  Balla Kavya</a>
+              < a href="https://github.com/kavyaballa1020" >  Balla Kavya</a>
 
           </div>
       </div>
