@@ -1,4 +1,4 @@
-# Number System Calculator
+# Number System Calculator [HexaGenius]
 
 This is a user-friendly Number System Calculator web application created by [Balla Kavya](https://github.com/kavyaballa1020). You can access the calculator [here](https://hexagenius-calculator.onrender.com/).
 
