@@ -32,7 +32,7 @@ If you want to use the Number System Calculator locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kavyaballa1020/number-system-calculator.git
+   git clone https://github.com/kavyaballa1020/HexaGenius-Calculator.git
    ```
 
 2. Navigate to the project directory:
