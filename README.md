@@ -61,6 +61,10 @@ Now, you have your own instance of the Number System Calculator running locally!
 
 Contributions and feedback are welcome! If you have any suggestions, find a bug, or want to contribute to the project, please create an issue or submit a pull request.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 ## Author
 
 - **Balla Kavya**
