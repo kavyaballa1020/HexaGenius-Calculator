@@ -14,21 +14,33 @@ const NumberSystemCalculator = () => {
     if (/^\d*$/.test(value)) {
       setDecimal(value);
 
-      setBinary(Number(value).toString(2));
-      setOctal(Number(value).toString(8));
-      setHexadecimal(Number(value).toString(16).toUpperCase());
+      if (value === "") {
+        setBinary("");
+        setOctal("");
+        setHexadecimal("");
+      } else {
+        setBinary(Number(value).toString(2));
+        setOctal(Number(value).toString(8));
+        setHexadecimal(Number(value).toString(16).toUpperCase());
+      }
     }
   };
 
   const handleBinaryChange = (e) => {
     const value = e.target.value;
 
-    if (/^[01]*$/.test(value)){
+    if (/^[01]*$/.test(value)) {
       setBinary(value);
 
-      setDecimal(parseInt(value, 2).toString());
-      setOctal(parseInt(value, 2).toString(8));
-      setHexadecimal(parseInt(value, 2).toString(16).toUpperCase());
+      if (value === "") {
+        setDecimal("");
+        setOctal("");
+        setHexadecimal("");
+      } else {
+        setDecimal(parseInt(value, 2).toString());
+        setOctal(parseInt(value, 2).toString(8));
+        setHexadecimal(parseInt(value, 2).toString(16).toUpperCase());
+      }
     }
   };
 
@@ -38,9 +50,15 @@ const NumberSystemCalculator = () => {
     if (/^[0-7]*$/.test(value)) {
       setOctal(value);
 
-      setDecimal(parseInt(value, 8).toString());
-      setBinary(parseInt(value, 8).toString(2));
-      setHexadecimal(parseInt(value, 8).toString(16).toUpperCase());
+      if (value === "") {
+        setDecimal("");
+        setBinary("");
+        setHexadecimal("");
+      } else {
+        setDecimal(parseInt(value, 8).toString());
+        setBinary(parseInt(value, 8).toString(2));
+        setHexadecimal(parseInt(value, 8).toString(16).toUpperCase());
+      }
     }
   };
 
@@ -50,9 +68,15 @@ const NumberSystemCalculator = () => {
     if (/^[0-9a-fA-F]*$/.test(value)) {
       setHexadecimal(value);
 
-      setDecimal(parseInt(value, 16).toString());
-      setBinary(parseInt(value, 16).toString(2));
-      setOctal(parseInt(value, 16).toString(8));
+      if (value === "") {
+        setDecimal("");
+        setBinary("");
+        setOctal("");
+      } else {
+        setDecimal(parseInt(value, 16).toString());
+        setBinary(parseInt(value, 16).toString(2));
+        setOctal(parseInt(value, 16).toString(8));
+      }
     }
   };
 
