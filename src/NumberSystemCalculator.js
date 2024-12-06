@@ -10,38 +10,50 @@ const NumberSystemCalculator = () => {
 
   const handleDecimalChange = (e) => {
     const value = e.target.value;
-    setDecimal(value);
 
-    setBinary(Number(value).toString(2));
-    setOctal(Number(value).toString(8));
-    setHexadecimal(Number(value).toString(16).toUpperCase());
+    if (/^\d*$/.test(value)) {
+      setDecimal(value);
+
+      setBinary(Number(value).toString(2));
+      setOctal(Number(value).toString(8));
+      setHexadecimal(Number(value).toString(16).toUpperCase());
+    }
   };
 
   const handleBinaryChange = (e) => {
     const value = e.target.value;
-    setBinary(value);
 
-    setDecimal(parseInt(value, 2).toString());
-    setOctal(parseInt(value, 2).toString(8));
-    setHexadecimal(parseInt(value, 2).toString(16).toUpperCase());
+    if (/^[01]*$/.test(value)){
+      setBinary(value);
+
+      setDecimal(parseInt(value, 2).toString());
+      setOctal(parseInt(value, 2).toString(8));
+      setHexadecimal(parseInt(value, 2).toString(16).toUpperCase());
+    }
   };
 
   const handleOctalChange = (e) => {
     const value = e.target.value;
-    setOctal(value);
 
-    setDecimal(parseInt(value, 8).toString());
-    setBinary(parseInt(value, 8).toString(2));
-    setHexadecimal(parseInt(value, 8).toString(16).toUpperCase());
+    if (/^[0-7]*$/.test(value)) {
+      setOctal(value);
+
+      setDecimal(parseInt(value, 8).toString());
+      setBinary(parseInt(value, 8).toString(2));
+      setHexadecimal(parseInt(value, 8).toString(16).toUpperCase());
+    }
   };
 
   const handleHexadecimalChange = (e) => {
     const value = e.target.value;
-    setHexadecimal(value);
 
-    setDecimal(parseInt(value, 16).toString());
-    setBinary(parseInt(value, 16).toString(2));
-    setOctal(parseInt(value, 16).toString(8));
+    if (/^[0-9a-fA-F]*$/.test(value)) {
+      setHexadecimal(value);
+
+      setDecimal(parseInt(value, 16).toString());
+      setBinary(parseInt(value, 16).toString(2));
+      setOctal(parseInt(value, 16).toString(8));
+    }
   };
 
   return (
